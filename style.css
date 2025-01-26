@@ -253,99 +253,93 @@ a:active {
     margin-right: 20px; /* Espaço da direita */
 }
 
-/* Media Queries para Responsividade */
-/* Media Queries para Responsividade */
+
+/* Responsividade para telas pequenas, exibindo os itens em coluna */
+/* Responsividade para telas pequenas, exibindo os itens em coluna */
 @media (max-width: 1024px) {
-    /* Para Tablets */
     section {
-        display: flex; /* Usando flexbox para empilhar os itens */
-        flex-direction: column; /* Alinha os itens (imagem e texto) em uma coluna */
-        width: 100%; /* Garante que a section ocupe toda a largura */
+        display: flex;
+        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
+        gap: 2rem;  /* Espaço entre os itens */
+    
     }
 
-    .img {
-        width: 100%; /* A imagem ocupa a largura total da tela */
-        height: auto; /* Ajusta a altura para manter a proporção */
-        margin-bottom: 1rem; /* Espaço abaixo da imagem */
-        border-radius: 0; /* Remove as bordas arredondadas */
+    .pagina {
+        display: flex;  /* Mantém todos os itens visíveis */
+        opacity: 1;
+        height: auto;  /* Remova a altura fixa */
+        margin: 0;  /* Remove margens extras */
+        flex-direction: column;  /* Imagem abaixo do texto */
+
     }
 
     .texto {
-        width: 100%; /* O texto ocupa a largura total da tela */
-        margin-top: 0; /* Remove a margem superior */
-        padding: 0 2rem; /* Adiciona padding lateral para o texto */
+        width: 100%;  /* Garantir que o texto ocupe toda a largura */
+        max-width: 90%;  /* Limita a largura do texto para telas menores */
+        text-align: center;  /* Alinha o texto à esquerda */
+        margin-bottom: 1rem;  /* Espaço entre o texto e a imagem */
+    }
+
+    .img {
+        width: 100%;  /* A imagem ocupa toda a largura disponível */
+        height: auto;  /* Ajuste automático da altura */
+        border-radius: 8px;  /* Mantém bordas arredondadas */
+        margin-top: 1rem;  /* Espaçamento entre o texto e a imagem */
     }
 
     .arrow {
-        position: absolute; /* A seta fica fixa na parte inferior */
-        bottom: 10%; /* Ajusta a posição da seta para a parte inferior */
-        right: 10%;
-    }
-
-    #prev, #next {
-        font-size: 3rem; /* Ajusta o tamanho das setas */
+        display: none;  /* Esconde os controles do carrossel em telas pequenas */
     }
 }
 
+/* Responsividade para dispositivos ainda menores, como celulares */
 @media (max-width: 768px) {
-    /* Para telas menores, exibe a imagem no topo e texto abaixo */
     section {
-        display: flex; /* Usando flexbox para empilhar os itens */
-        flex-direction: column; /* Forçando o layout em coluna */
-        width: 100%; /* Garantir que a section ocupe 100% da largura */
+        display: flex;
+        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
+        gap: 2rem;  /* Espaço entre os itens */
+
+    }
+
+    .pagina {
+        display: flex;  /* Mantém todos os itens visíveis */
+        opacity: 1;
+        height: auto;  /* Remove a altura fixa */
+        margin: 0;  /* Remove margens extras */
     }
 
     .img {
-        width: 100%; /* A imagem ocupa a largura total da tela */
-        height: auto; /* Ajusta a altura para manter a proporção */
-        margin-bottom: 1rem; /* Adiciona um espaçamento entre a imagem e o texto */
-        border-radius: 0; /* Remove as bordas arredondadas */
+        width: 100%;  /* Faz as imagens ocuparem toda a largura disponível */
+        height: auto;  /* Ajuste automático da altura */
     }
 
-    .texto {
-        width: 100%; /* O texto ocupa a largura total da tela */
-        margin-top: 0; /* Remove a margem superior */
-        padding: 0 2rem; /* Ajuste o padding lateral do texto */
+    h1{
+        font-size: 1.75rem
     }
 
-    .arrow {
-        position: absolute;
-        bottom: 10%; /* Ajusta a posição das setas para a parte inferior */
-        right: 10%;
-    }
-
-    #prev, #next {
-        font-size: 2.5rem; /* Ajusta o tamanho das setas */
+    p{
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
-    /* Para telas muito pequenas */
     section {
-        display: flex; /* Usando flexbox para empilhar os itens */
-        flex-direction: column; /* Forçando o layout em coluna */
-        width: 100%; /* Garantir que a section ocupe toda a largura */
+        display: flex;
+        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
+        gap: 2rem;  /* Espaço entre os itens */
+
+    }
+
+    .pagina {
+        display: flex;  /* Mantém todos os itens visíveis */
+        opacity: 1;
+        height: auto;  /* Remove a altura fixa */
+        margin: 0;  /* Remove margens extras */
+     
     }
 
     .img {
-        width: 100%; /* A imagem ocupa toda a largura da tela */
-        height: auto; /* Ajusta a altura para manter a proporção */
-        margin-bottom: 1rem; /* Adiciona um espaçamento entre a imagem e o texto */
-        border-radius: 0; /* Remove bordas arredondadas */
-    }
-
-    .texto {
-        width: 100%; /* O texto ocupa a largura total da tela */
-        padding: 0 1rem; /* Ajuste o padding para telas pequenas */
-    }
-
-    .arrow {
-        position: absolute;
-        bottom: 10%; /* Ajusta a posição das setas para a parte inferior */
-        right: 5%;
-    }
-
-    #prev, #next {
-        font-size: 2rem; /* Ajusta o tamanho das setas */
+        width: 100%;  /* Imagens ocupando toda a largura */
+        height: auto;  /* Ajuste automático da altura */
     }
 }

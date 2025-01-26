@@ -275,26 +275,22 @@ a:active {
 }
 
 @media (max-width: 768px) {
-    /* Telas de celulares maiores */
-    .texto {
-        max-width: 90vw; /* Ajuste no texto para telas ainda menores */
-    }
-
+    /* Para telas menores, exibe a imagem no topo */
     .img {
-        max-width: 80vw; /* Ajuste na imagem */
-        height: auto; /* Ajusta a altura da imagem para não estourar o layout */
+        width: 100vw;  /* A imagem ocupa a largura total da tela */
+        height: auto;   /* Ajusta a altura para manter a proporção */
+        border-radius: 0;  /* Remove os bordas arredondadas */
+        position: absolute; /* Posiciona a imagem no topo da tela */
+        top: 0;
+        left: 0;
     }
 
-    h1 {
-        font-size: 2rem; /* Reduz o tamanho da fonte */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte */
-    }
-
-    p {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    .texto {
+        max-width: 90vw;  /* Ajusta o texto para ocupar a maior parte da tela */
+        margin-top: 100vh;  /* Deixa um espaço suficiente para o texto aparecer abaixo da imagem */
+        margin-left: 5vw;  /* Adiciona uma margem à esquerda */
+        margin-right: 5vw; /* Adiciona uma margem à direita */
+        margin-bottom: 2rem; /* Adiciona uma margem na parte inferior */
     }
 
     .arrow {
@@ -308,13 +304,21 @@ a:active {
 }
 
 @media (max-width: 480px) {
-    /* Telas de celulares pequenos */
-    .texto {
-        max-width: 100vw; /* Texto ocupa toda a largura da tela */
+    /* Para telas muito pequenas */
+    .img {
+        width: 100vw;  /* A imagem ocupa a largura total da tela */
+        height: auto;   /* Ajusta a altura para manter a proporção */
+        position: absolute; /* Posiciona a imagem no topo da tela */
+        top: 0;
+        left: 0;
     }
 
-    .img {
-        display: none; /* Remove a imagem para celulares muito pequenos, se necessário */
+    .texto {
+        max-width: 100vw; /* Texto ocupa toda a largura da tela */
+        margin-top: 100vh; /* Espaço suficiente para o texto vir abaixo da imagem */
+        margin-left: 2vw;  /* Margem à esquerda */
+        margin-right: 2vw; /* Margem à direita */
+        margin-bottom: 1rem; /* Margem inferior */
     }
 
     .arrow {
@@ -324,17 +328,5 @@ a:active {
 
     #prev, #next {
         font-size: 2rem; /* Ajusta o tamanho das setas */
-    }
-
-    h1 {
-        font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte */
-    }
-
-    h2 {
-        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
-    }
-
-    p {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
     }
 }

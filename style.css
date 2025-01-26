@@ -277,17 +277,15 @@ a:active {
 @media (max-width: 768px) {
     /* Para telas menores, exibe a imagem no topo */
     .img {
-        width: 100vw;  /* A imagem ocupa a largura total da tela */
+        min-width: 80vw;  /* A imagem ocupa a largura total da tela */
         height: auto;   /* Ajusta a altura para manter a proporção */
         border-radius: 0;  /* Remove os bordas arredondadas */
-        position: absolute; /* Posiciona a imagem no topo da tela */
-        top: 0;
-        left: 0;
+        border: 2rem;
     }
 
     .texto {
         max-width: 90vw;  /* Ajusta o texto para ocupar a maior parte da tela */
-        margin-top: 100vh;  /* Deixa um espaço suficiente para o texto aparecer abaixo da imagem */
+        margin-top: 90vh;  /* Deixa um espaço suficiente para o texto aparecer abaixo da imagem */
         margin-left: 5vw;  /* Adiciona uma margem à esquerda */
         margin-right: 5vw; /* Adiciona uma margem à direita */
         margin-bottom: 2rem; /* Adiciona uma margem na parte inferior */
@@ -306,19 +304,18 @@ a:active {
 @media (max-width: 480px) {
     /* Para telas muito pequenas */
     .img {
-        width: 100vw;  /* A imagem ocupa a largura total da tela */
+        min-width: 80vw;  /* A imagem ocupa a largura total da tela */
         height: auto;   /* Ajusta a altura para manter a proporção */
-        position: absolute; /* Posiciona a imagem no topo da tela */
-        top: 0;
-        left: 0;
+        border-radius: 0;  /* Remove os bordas arredondadas */
+        border: 2rem;
     }
 
     .texto {
-        max-width: 90vw; /* Texto ocupa toda a largura da tela */
-        margin-top: 80vh; /* Espaço suficiente para o texto vir abaixo da imagem */
-        margin-left: 2vw;  /* Margem à esquerda */
-        margin-right: 2vw; /* Margem à direita */
-        margin-bottom: 1rem; /* Margem inferior */
+        max-width: 90vw;  /* Ajusta o texto para ocupar a maior parte da tela */
+        margin-top: 90vh;  /* Deixa um espaço suficiente para o texto aparecer abaixo da imagem */
+        margin-left: 5vw;  /* Adiciona uma margem à esquerda */
+        margin-right: 5vw; /* Adiciona uma margem à direita */
+        margin-bottom: 2rem; /* Adiciona uma margem na parte inferior */
     }
 
     .arrow {

@@ -10,9 +10,19 @@ function isLargeScreen() {
     return window.matchMedia("(min-width: 1025px)").matches;  // Verifica se a largura da tela é maior que 1024px
 }
 
-// Executa o código somente se a tela for maior que 1024px
+// Função para remover a classe 'active' se a tela for pequena
+function handleResize() {
+    if (!isLargeScreen()) {
+        // Em telas pequenas, remove a classe 'active' de todos os slides
+        list.forEach(pagina => pagina.classList.remove('active'));
+    }
+}
+
+// Inicializa a verificação de largura
+handleResize();  // Verifica logo de início
+
+// Atualiza o slide ativo apenas se a tela for maior que 1024px
 if (isLargeScreen()) {
-    // Atualiza o slide ativo
     next.onclick = () => {
         // Remove a classe 'active' do slide atual
         let activeOld = document.querySelector('.pagina.active');
@@ -37,3 +47,6 @@ if (isLargeScreen()) {
         list[active].classList.add('active');
     }
 }
+
+// Adiciona o evento de resize para monitorar mudanças no tamanho da tela
+window.addEventListener('resize', handleResize);

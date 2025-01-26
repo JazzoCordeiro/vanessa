@@ -290,6 +290,14 @@ a:active {
     .arrow {
         display: none;  /* Esconde os controles do carrossel em telas pequenas */
     }
+    .contato {
+        position: fixed;
+        right: 10px;
+        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
+        z-index: 9999;
+        padding: 10px;
+        border: 0;
+    }
 }
 
 /* Responsividade para dispositivos ainda menores, como celulares */
@@ -320,6 +328,14 @@ a:active {
     p{
         font-size: 1.25rem;
     }
+    .contato {
+        position: fixed;
+        right: 10px;
+        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
+        z-index: 9999;
+        padding: 10px;
+        border: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -330,16 +346,25 @@ a:active {
 
     }
 
-    .pagina {
+    .pagina{
         display: flex;  /* Mantém todos os itens visíveis */
         opacity: 1;
         height: auto;  /* Remove a altura fixa */
         margin: 0;  /* Remove margens extras */
      
     }
+   
 
     .img {
         width: 100%;  /* Imagens ocupando toda a largura */
         height: auto;  /* Ajuste automático da altura */
+    }
+    .contato {
+        position: fixed;
+        right: 10px;
+        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
+        z-index: 9999;
+        padding: 10px;
+        border: 0;
     }
 }

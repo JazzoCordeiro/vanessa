@@ -314,8 +314,8 @@ a:active {
     }
 
     .texto {
-        max-width: 100vw; /* Texto ocupa toda a largura da tela */
-        margin-top: 100vh; /* Espaço suficiente para o texto vir abaixo da imagem */
+        max-width: 90vw; /* Texto ocupa toda a largura da tela */
+        margin-top: 80vh; /* Espaço suficiente para o texto vir abaixo da imagem */
         margin-left: 2vw;  /* Margem à esquerda */
         margin-right: 2vw; /* Margem à direita */
         margin-bottom: 1rem; /* Margem inferior */

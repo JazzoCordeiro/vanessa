@@ -255,54 +255,62 @@ a:active {
 
 /* Media Queries para Responsividade */
 /* Media Queries para Responsividade */
-
-
-
-/* Media Queries para Responsividade */
 @media (max-width: 1024px) {
-    /* Tablets */
-    .texto {
-        max-width: 70vw; /* Ajuste no texto para telas menores */
-    }
-
-    .img {
-        max-width: 50vw; /* Ajuste na imagem */
-    }
-
-    .arrow {
-        top: 90%; /* Ajuste o posicionamento da seta em telas menores */
-        right: 20%;
-    }
-
-    #prev, #next {
-        font-size: 3rem; /* Diminui o tamanho das setas */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Para telas menores, exibe a imagem no topo e texto abaixo */
-    
-    /* Garantir que o layout da página seja empilhado, com imagem no topo e texto abaixo */
+    /* Para Tablets */
     section {
-        display: block; /* Mudando para block, para garantir que os elementos fiquem um abaixo do outro */
+        display: flex; /* Usando flexbox para empilhar os itens */
+        flex-direction: column; /* Alinha os itens (imagem e texto) em uma coluna */
+        width: 100%; /* Garante que a section ocupe toda a largura */
     }
 
     .img {
-        width: 100vw; /* A imagem ocupa a largura total da tela */
-        height: auto;  /* Ajusta a altura para manter a proporção */
-        border-radius: 0; /* Remove os bordas arredondadas */
-        margin-bottom: 2rem; /* Espaço abaixo da imagem */
+        width: 100%; /* A imagem ocupa a largura total da tela */
+        height: auto; /* Ajusta a altura para manter a proporção */
+        margin-bottom: 1rem; /* Espaço abaixo da imagem */
+        border-radius: 0; /* Remove as bordas arredondadas */
     }
 
     .texto {
-        width: 100vw;  /* Ajusta o texto para ocupar a largura total da tela */
-        margin-top: 0; /* Remove a margem superior para garantir que o texto não fique colado à imagem */
-        padding: 0 2rem; /* Adiciona algum padding nas laterais para o texto não ficar tão colado nas bordas */
+        width: 100%; /* O texto ocupa a largura total da tela */
+        margin-top: 0; /* Remove a margem superior */
+        padding: 0 2rem; /* Adiciona padding lateral para o texto */
     }
 
     .arrow {
         position: absolute; /* A seta fica fixa na parte inferior */
         bottom: 10%; /* Ajusta a posição da seta para a parte inferior */
+        right: 10%;
+    }
+
+    #prev, #next {
+        font-size: 3rem; /* Ajusta o tamanho das setas */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Para telas menores, exibe a imagem no topo e texto abaixo */
+    section {
+        display: flex; /* Usando flexbox para empilhar os itens */
+        flex-direction: column; /* Forçando o layout em coluna */
+        width: 100%; /* Garantir que a section ocupe 100% da largura */
+    }
+
+    .img {
+        width: 100%; /* A imagem ocupa a largura total da tela */
+        height: auto; /* Ajusta a altura para manter a proporção */
+        margin-bottom: 1rem; /* Adiciona um espaçamento entre a imagem e o texto */
+        border-radius: 0; /* Remove as bordas arredondadas */
+    }
+
+    .texto {
+        width: 100%; /* O texto ocupa a largura total da tela */
+        margin-top: 0; /* Remove a margem superior */
+        padding: 0 2rem; /* Ajuste o padding lateral do texto */
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 10%; /* Ajusta a posição das setas para a parte inferior */
         right: 10%;
     }
 
@@ -313,21 +321,27 @@ a:active {
 
 @media (max-width: 480px) {
     /* Para telas muito pequenas */
+    section {
+        display: flex; /* Usando flexbox para empilhar os itens */
+        flex-direction: column; /* Forçando o layout em coluna */
+        width: 100%; /* Garantir que a section ocupe toda a largura */
+    }
+
     .img {
-        width: 100vw; /* A imagem ocupa a largura total da tela */
+        width: 100%; /* A imagem ocupa toda a largura da tela */
         height: auto; /* Ajusta a altura para manter a proporção */
-        border-radius: 0; /* Remove os bordas arredondadas */
-        margin-bottom: 1rem; /* Espaço abaixo da imagem */
+        margin-bottom: 1rem; /* Adiciona um espaçamento entre a imagem e o texto */
+        border-radius: 0; /* Remove bordas arredondadas */
     }
 
     .texto {
-        width: 100vw; /* Ajusta o texto para ocupar a largura total da tela */
-        padding: 0 1rem;  /* Ajusta o padding para telas muito pequenas */
+        width: 100%; /* O texto ocupa a largura total da tela */
+        padding: 0 1rem; /* Ajuste o padding para telas pequenas */
     }
 
     .arrow {
         position: absolute;
-        bottom: 10%; /* Ajusta a posição da seta para a parte inferior */
+        bottom: 10%; /* Ajusta a posição das setas para a parte inferior */
         right: 5%;
     }
 

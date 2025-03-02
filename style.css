@@ -1,82 +1,96 @@
 :root {
-    --background: #e9dfcc;
-    --font: #1f0700;
-    --clicked: #3a1c00;
-    --toClick: #8d0404;
-    --hover: #ff4800;
-    --title: #7a3202;
-    --zap: #f18500;
-    --botao: #b40000;;
+    --background: #fdfaf6;
+    --font: #1a1a1a;
+    --title: #8b0000;
+    --highlight: #a0522d;
+    --link: #6b0f1a;
+    --hover: #d2691e;
+    --clicked: #4b0000;
+    --button-bg: #6b0f1a;
+    --button-hover: #b8860b;
+    --button-text: #ffffff;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Para garantir que o box model seja aplicado corretamente */
+    box-sizing: border-box;
 }
 
-html, body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at right, var(--background) 63%, var(--zap) );
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
     color: var(--font);
-    height: 100%; /* Garante que a altura do body ocupe 100% da tela */
-    position: relative; /* Necessário para garantir o contexto de empilhamento */
+    height: 100%;
+    position: relative;
 }
 
 section {
-    gap: 4rem; /* Adiciona um espaço entre a imagem e o texto */
-    align-items: center; /* Alinha verticalmente os itens */
+    gap: 4rem;
+    align-items: center;
     position: relative;
     z-index: 1;
 }
 
 .pagina {
     width: 100%;
-    height: 100vh; /* Garantir que a página ocupe 100% da altura da tela */
+    height: 100vh;
     display: none;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.5s ease; /* Suavizar a transição ao exibir/ocultar */
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .pagina.active {
-    opacity: 1; /* Quando ativa, torna-se visível */
+    opacity: 1;
     display: flex;
-    transition: opacity 0.5s ease; /* Suavizar a transição */
+    transition: opacity 0.5s ease;
     position: absolute;
 }
 
 .texto {
-    max-width: 55vw; /* Limita a largura do texto para evitar que ocupe muito espaço */
-    text-align: left; /* Alterado para não justificar o texto */
+    max-width: 55vw;
+    text-align: left;
+    padding: 2rem;
 }
 
 .img {
-    height: 100vh; /* Garante que a imagem não ultrapasse 60% da altura da tela */
+    height: 100vh;
     max-width: 35vw;
     min-width: 35vw;
-    border-radius: 0 8px 8px 0; /* Dá bordas arredondadas na imagem */
+    object-fit: cover;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.288);
+    border: 1px solid #00000048;
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    margin-top: 0;
     color: var(--title);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--title);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--font);
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.308);
 }
 
 a {
-    color: var(--toClick);
+    color: var(--link);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
@@ -91,280 +105,155 @@ a:active {
 .contato {
     position: absolute;
     right: 10px;
-    bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
+    bottom: 10px;
     z-index: 9999;
     padding: 10px;
-    border: 0;
+    border: none;
+    
 }
 
 .arrow {
     position: absolute;
-    top: 85%; /* Coloca no meio verticalmente */
-    right: 27%; /* Coloca a .arrow a 35% da direita */
-    width: auto; /* Ajuste conforme necessário */
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between; /* Para garantir que os botões fiquem separados */
-    width: 100%; /* Para a largura dos botões cobrir o espaço disponível */
-    max-width: 200px; /* Limita o tamanho da .arrow */
-}
-
-#prev, #next {
-    background-color: transparent;
-    color: var(--botao);
-    font-size: 4rem;
-    cursor: pointer;
-    border-color: transparent;
-}
-
-#prev {
-    margin-left: 20px; /* Espaço da esquerda */
-}
-
-#next {
-    margin-right: 20px; /* Espaço da direita */
-}
-
-
-:root {
-    --background: #e9dfcc;
-    --font: #1f0700;
-    --clicked: #3a1c00;
-    --toClick: #8d0404;
-    --hover: #ff4800;
-    --title: #7a3202;
-    --zap: #f18500;
-    --botao: #b40000;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Para garantir que o box model seja aplicado corretamente */
-}
-
-html, body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at right, var(--background) 63%, var(--zap) );
-    color: var(--font);
-    height: 100%; /* Garante que a altura do body ocupe 100% da tela */
-    position: relative; /* Necessário para garantir o contexto de empilhamento */
-}
-
-section {
-    gap: 4rem; /* Adiciona um espaço entre a imagem e o texto */
-    align-items: center; /* Alinha verticalmente os itens */
-    position: relative;
-    z-index: 1;
-}
-
-.pagina {
+    top: 85%;
+    right: 27%;
     width: 100%;
-    height: 100vh; /* Garantir que a página ocupe 100% da altura da tela */
-    display: none;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.5s ease; /* Suavizar a transição ao exibir/ocultar */
-}
-
-.pagina.active {
-    opacity: 1; /* Quando ativa, torna-se visível */
+    max-width: 200px;
+    z-index: 9999;
     display: flex;
-    transition: opacity 0.5s ease; /* Suavizar a transição */
-    position: absolute;
+    justify-content: space-between;
+    
 }
 
-.texto {
-    max-width: 55vw; /* Limita a largura do texto para evitar que ocupe muito espaço */
-    text-align: left; /* Alterado para não justificar o texto */
-}
-
-.img {
-    height: 100vh; /* Garante que a imagem não ultrapasse 60% da altura da tela */
-    max-width: 35vw;
-    min-width: 35vw;
-    border-radius: 0 8px 8px 0; /* Dá bordas arredondadas na imagem */
-}
-
-h1 {
+#prev,
+#next {
+    background-color: var(--button-bg);
+    color: var(--button-text);
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-    color: var(--title);
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--title);
-}
-
-p {
-    font-size: 1.5rem;
-    color: var(--font);
-}
-
-a {
-    color: var(--toClick);
-}
-
-a:hover {
-    color: var(--hover);
     cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.288);
+    border: 1px solid #ffffff2c;
+    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.205);
 }
 
-a:active {
-    color: var(--clicked);
-}
-
-.contato {
-    position: absolute;
-    right: 10px;
-    bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
-    z-index: 9999;
-    padding: 10px;
-    border: 0;
-}
-
-.arrow {
-    position: absolute;
-    top: 85%; /* Coloca no meio verticalmente */
-    right: 27%; /* Coloca a .arrow a 35% da direita */
-    width: auto; /* Ajuste conforme necessário */
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between; /* Para garantir que os botões fiquem separados */
-    width: 100%; /* Para a largura dos botões cobrir o espaço disponível */
-    max-width: 200px; /* Limita o tamanho da .arrow */
-}
-
-#prev, #next {
-    background-color: transparent;
-    color: var(--botao);
-    font-size: 4rem;
-    cursor: pointer;
-    border-color: transparent;
+#prev:hover,
+#next:hover {
+    background-color: var(--button-hover);
+    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.205);
 }
 
 #prev {
-    margin-left: 20px; /* Espaço da esquerda */
+    margin-left: 20px;
 }
 
 #next {
-    margin-right: 20px; /* Espaço da direita */
+    margin-right: 20px;
 }
 
-
-/* Responsividade para telas pequenas, exibindo os itens em coluna */
-/* Responsividade para telas pequenas, exibindo os itens em coluna */
+/* Responsividade para tablets */
 @media (max-width: 1024px) {
     section {
         display: flex;
-        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
-        gap: 2rem;  /* Espaço entre os itens */
-    
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .pagina {
-        display: flex;  /* Mantém todos os itens visíveis */
+        display: flex;
         opacity: 1;
-        height: auto;  /* Remova a altura fixa */
-        margin: 0;  /* Remove margens extras */
-        flex-direction: column;  /* Imagem abaixo do texto */
-
+        height: auto;
+        margin: 0;
+        flex-direction: column;
     }
 
     .texto {
-        width: 100%;  /* Garantir que o texto ocupe toda a largura */
-        max-width: 90%;  /* Limita a largura do texto para telas menores */
-        text-align: center;  /* Alinha o texto à esquerda */
-        margin-bottom: 1rem;  /* Espaço entre o texto e a imagem */
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
     }
 
     .img {
-        width: 100%;  /* A imagem ocupa toda a largura disponível */
-        height: auto;  /* Ajuste automático da altura */
-        border-radius: 8px;  /* Mantém bordas arredondadas */
-        margin-top: 1rem;  /* Espaçamento entre o texto e a imagem */
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 1rem;
     }
 
     .arrow {
-        display: none;  /* Esconde os controles do carrossel em telas pequenas */
+        display: none;
     }
+
     .contato {
         position: fixed;
         right: 10px;
-        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
-        z-index: 9999;
-        padding: 10px;
-        border: 0;
+        bottom: 10px;
     }
 }
 
-/* Responsividade para dispositivos ainda menores, como celulares */
+/* Responsividade para celulares */
 @media (max-width: 768px) {
     section {
         display: flex;
-        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
-        gap: 2rem;  /* Espaço entre os itens */
-
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .pagina {
-        display: flex;  /* Mantém todos os itens visíveis */
+        display: flex;
         opacity: 1;
-        height: auto;  /* Remove a altura fixa */
-        margin: 0;  /* Remove margens extras */
+        height: auto;
+        margin: 0;
+        flex-direction: column;
     }
 
     .img {
-        width: 100%;  /* Faz as imagens ocuparem toda a largura disponível */
-        height: auto;  /* Ajuste automático da altura */
+        width: 100%;
+        height: auto;
     }
 
-    h1{
-        font-size: 1.75rem
+    h1 {
+        font-size: 1.75rem;
     }
 
-    p{
-        font-size: 1.25rem;
+    p {
+        font-size: 1.1rem;
     }
+
     .contato {
         position: fixed;
         right: 10px;
-        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
-        z-index: 9999;
-        padding: 10px;
-        border: 0;
+        bottom: 10px;
     }
 }
 
 @media (max-width: 480px) {
     section {
         display: flex;
-        flex-direction: column;  /* Exibe os itens em coluna: imagem abaixo do texto */
-        gap: 2rem;  /* Espaço entre os itens */
-
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    .pagina{
-        display: flex;  /* Mantém todos os itens visíveis */
+    .pagina {
+        display: flex;
         opacity: 1;
-        height: auto;  /* Remove a altura fixa */
-        margin: 0;  /* Remove margens extras */
-     
+        height: auto;
+        margin: 0;
+        flex-direction: column;
     }
-   
 
     .img {
-        width: 100%;  /* Imagens ocupando toda a largura */
-        height: auto;  /* Ajuste automático da altura */
+        width: 100%;
+        height: auto;
     }
+
     .contato {
         position: fixed;
         right: 10px;
-        bottom: 10px; /* Ajuste conforme necessário, pode usar top: 10px se preferir no topo */
-        z-index: 9999;
-        padding: 10px;
-        border: 0;
+        bottom: 10px;
     }
 }
